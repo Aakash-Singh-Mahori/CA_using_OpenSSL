@@ -1,11 +1,10 @@
-# Introduction
-This contains a list of commands in order to locally create a CA with a chain of trust structure. It is created to with the structure of actual CAs in mind.
-
 # 🛡️ Educational Certificate Authority (CA) Setup with OpenSSL
 
 This repository contains a complete setup for creating a basic Root CA, Intermediate CA, and issuing server certificates using OpenSSL.
 
 ---
+## Introduction
+This contains a list of commands in order to locally create a CA with a chain of trust structure. It is created to with the structure of actual CAs in mind.
 
 ## ⚠️ Disclaimer
 
