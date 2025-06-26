@@ -1,0 +1,3 @@
+OpenSSL for Windows must be installed and added to PATH.
+
+Run commands inside the root folder of the repo (same level as the .bat files).
