@@ -1,0 +1,45 @@
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir             = ./intermediate
+certs           = $dir/certs
+crl_dir         = $dir/crl
+new_certs_dir   = $dir/newcerts
+database        = $dir/index.txt
+serial          = $dir/serial
+private_key     = $dir/private/intermediateCA.key.pem
+certificate     = $dir/intermediateCA.crt.pem
+default_md      = sha256
+policy          = policy_loose
+x509_extensions = v3_intermediate_ca
+
+[ policy_loose ]
+countryName             = optional
+stateOrProvinceName     = optional
+organizationName        = optional
+organizationalUnitName  = optional
+commonName              = supplied
+emailAddress            = optional
+
+[ req ]
+default_bits        = 4096
+prompt              = no
+default_md          = sha256
+distinguished_name  = dn
+x509_extensions     = v3_intermediate_ca
+
+[ dn ]
+C  = IN
+ST = Uttarakhand
+L  = Haldwani
+O  = ABC Corporation LTD
+OU = ABC Tech Support
+CN = ABC Intermediate CA
+emailAddress = asmofficial172006@gmail.com
+
+[ v3_intermediate_ca ]
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+basicConstraints = critical, CA:true, pathlen:0
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign
